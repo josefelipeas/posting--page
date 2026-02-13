@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-1: #061E29;
+    --primary-2: #1D546D;
+    --primary-3: #5F9598;
+    --primary-4: #F3F4F4;
+}
+
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+
+h1, h2 {
+    font-size: initial;
+    margin: 0;
+}
+
+
+
