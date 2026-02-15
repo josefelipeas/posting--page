@@ -19,5 +19,112 @@ h1, h2 {
     margin: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
 
+body {
+    background-image: linear-gradient( 177.6deg,  rgba(20,0,113,1) 15.3%, rgba(1,0,62,1) 91.3% );
+}
 
+p {
+    margin: 0;
+}
+
+#header {
+    background-color: var(--primary-4);
+    color: black;
+    height: 60px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 8px 0 #120916;
+    text-align: center;
+    padding-top: 9px;
+}
+
+#header h1 {
+    color: var(--primary-2);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container {
+    width: 800px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: var(--primary-4);
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px 2px var(--primary-4);
+}
+
+.post-form {
+    background-color: #1d546d24;
+    border-radius: 6px;
+    margin-inline: auto;
+    width: 600px;
+    padding: 20px;
+}
+
+.post-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--primary-2);
+}
+
+.post-form input {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.post-form textarea {
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100px;
+    padding: 8px 5px;
+    font-family: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+#post-button {
+    display: block;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    background-color: var(--primary-2);
+    color: var(--primary-4);
+    transition: 300ms ease-in-out;
+}
+
+#post-button:active {
+    background-color: var(--primary-3);
+    color: var(--primary-2);
+}
+
+#post-button:hover {
+    opacity: .7;
+}
+
+#footer {
+    background-color: var(--primary-4);
+    height: 60px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer p {
+    color: var(--primary-2);
+    padding-top: 15px;
+}
