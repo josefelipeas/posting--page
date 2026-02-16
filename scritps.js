@@ -51,6 +51,7 @@ const API = new PacoteBuscador("https://jsonplaceholder.typicode.com");
 
 
 form.addEventListener("submit", event => {
+    event.preventDefault();
 
     if (postTitle.value && postContent.value) {
         startLoader(postButton);
