@@ -53,19 +53,26 @@ const API = new PacoteBuscador("https://jsonplaceholder.typicode.com");
 form.addEventListener("submit", event => {
     event.preventDefault();
 
-    const data = {
-        title: postTitle.value,
-        body: postContent.value,
-        userId: 1
-    };
-
-    API.post("/posts", data)
-        .then(data => {
-            console.log(data);
-            renderTitle.innerHTML = data.title;
-            renderContent.innerHTML = data.body;
-        })
-        .catch(error => {
-            console.error(error);
-        })
+    if (postTitle.value && postContent.value) {
+        startLoader(postButton);
+        const data = {
+            title: postTitle.value,
+            body: postContent.value,
+            userId: 1
+        };
+        API.post("/posts", data)
+            .then(data => {
+                console.log(data);
+                renderTitle.innerHTML = data.title;
+                renderContent.innerHTML = data.body;
+            })
+            .catch(error => {
+                console.error(error);
+            })
+            .finally(() => {
+                stopLoader(postButton, "Postar")
+            })
+    } else {
+        throw new Error("Sem informações para enviar");
+    }
 })
